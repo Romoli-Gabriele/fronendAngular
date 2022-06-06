@@ -8,6 +8,7 @@
       <th scope="col">Last Name</th>
       <th scope="col">Edit</th>
       <th scope="col">Delete</th>
+      <th scope="col"><button class="btn btn-success" (click)="aggiungi()">aggiungi</button></th>
     </tr>
   </thead>
   <tr scope="raw" *ngFor="let el of dati; index as i">
@@ -29,5 +30,5 @@
   <input type="text" [(ngModel)]="elMod.lastName">
   <button class="btn btn-success" (click)="closeEdit()">close</button>
 </div>
-<br>
-<button class="btn btn-success" (click)="aggiungi()">aggiungi</button>
+
+
