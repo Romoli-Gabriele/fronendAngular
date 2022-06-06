@@ -1,23 +1,33 @@
 
-<button (click)="aggiungi()">aggiungi</button>
-
-<table>
-    <tr *ngFor="let el of dati; index as i">
-        <td>{{el.id}}</td>
-        <td>{{el.birthDate}}</td>
-        <td>{{el.firstName}}</td>
-        <td>{{el.lastName}}</td>
-        <td><button (click)="modifica(el)">modifica</button></td>
-        <td><button (click)="elimina(i)">elimina</button></td>
+<table class="table table-striped" style="text-align: center;">
+  <thead>
+    <tr scope="raw">
+      <th scope="col">ID</th>
+      <th scope="col">birth date</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
     </tr>
+  </thead>
+  <tr scope="raw" *ngFor="let el of dati; index as i">
+    <td>{{el.id}}</td>
+    <td>{{el.birthDate}}</td>
+    <td>{{el.firstName}}</td>
+    <td>{{el.lastName}}</td>
+    <td><button class="btn btn-outline-warning" (click)="modifica(el)">modifica</button></td>
+    <td><button class="btn btn-outline-danger" (click)="elimina(i)">elimina</button></td>
+  </tr>
 </table>
 
 
 
 <div *ngIf="elMod != null">
-    <input type="text" [(ngModel)]="elMod.id">
-    <input type="text" [(ngModel)]="elMod.birthDate">
-    <input type="text" [(ngModel)]="elMod.firstName">
-    <input type="text" [(ngModel)]="elMod.lastName">
-    <button-confirm></button-confirm>
+  <input type="text" [(ngModel)]="elMod.id">
+  <input type="text" [(ngModel)]="elMod.birthDate">
+  <input type="text" [(ngModel)]="elMod.firstName">
+  <input type="text" [(ngModel)]="elMod.lastName">
+  <button class="btn btn-success" (click)="closeEdit()">close</button>
 </div>
+<br>
+<button class="btn btn-success" (click)="aggiungi()">aggiungi</button>

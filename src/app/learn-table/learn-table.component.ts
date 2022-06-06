@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../types/Employee';
-import { ButtonConfirmComponent } from '../button-confirm/button-confirm.component';
+
 
 
 @Component({

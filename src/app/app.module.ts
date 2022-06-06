@@ -6,13 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LearnTableComponent } from './learn-table/learn-table.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ButtonConfirmComponent } from './button-confirm/button-confirm.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LearnTableComponent,
-    ButtonConfirmComponent
   ],
   imports: [
     BrowserModule,
